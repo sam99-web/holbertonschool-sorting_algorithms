@@ -1,2 +1,1 @@
-# holbertonschool-sorting_algorithms
-exercise foun
+C - Sorting algorithms & Big O
