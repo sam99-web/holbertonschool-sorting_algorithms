@@ -2,9 +2,9 @@
 
 /**
  * bubble_sort - Sorts an array of integers in ascending order
- * using the Bubble sort algorithm.
- * @array: The array to be sorted
- * @size: The size of the array
+ *               using the Bubble sort algorithm.
+ * @array: Pointer to the array to sort
+ * @size: Number of elements in the array
  *
  * Return: Nothing
  */
@@ -34,7 +34,6 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 
-		/* If no swap occurred, array is already sorted */
 		if (swapped == 0)
 			break;
 	}
