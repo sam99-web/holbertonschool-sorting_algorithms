@@ -1,9 +1,6 @@
+#ifndef SORT_H
+#define SORT_H
 
-#ifndef MAIN_H
-#define MAIN_H
-
-
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -15,16 +12,26 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
-/* Function prototypes */
-void print_array(const int *array, size_t size);
+/* Mandatory print functions */
 void print_list(const listint_t *list);
-void bubble_sort(int *array, size_t size);
+void print_array(const int *array, size_t size);
 
+/* Sorting algorithms */
+void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
+
+/* Internal helper functions for Quick sort */
+int lomuto_partition(int *array, int low, int high, size_t size);
+void quick_recursion(int *array, int low, int high, size_t size);
+
+#include <stdio.h>
+#include <stdlib.h>
+void bubble_sort(int *array, size_t size);
+void insertion_sort_list(listint_t **list);
 
 #endif /* SORT_H */
-
